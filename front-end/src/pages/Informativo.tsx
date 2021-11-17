@@ -1,5 +1,13 @@
+import Menu from "../componets/menu/Menu";
+
 const Informativo = () => {
-  return <> Informativo</>;
+  return (
+    <>
+      {" "}
+      <Menu />
+      <p>Informativo</p>
+    </>
+  );
 };
 
 export default Informativo;
