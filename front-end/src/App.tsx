@@ -1,5 +1,11 @@
+import Rotas from "./rotas";
+
 function App() {
-  return <>Home</>;
+  return (
+    <>
+      <Rotas />
+    </>
+  );
 }
 
 export default App;
