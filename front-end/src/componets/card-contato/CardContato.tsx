@@ -2,13 +2,12 @@
 
 import * as I from '../../types'
 import * as S from './style'
-type usuario = {
-  contatos: I.IUsuario
+type TipeUsuario = {
+  tipo: I.IUsuario
 }
 
-const CardContato = (us: usuario) => {
-  const { contatos } = us
-  let { id, nome, contato } = contatos.usuario
+const CardContato = (us: TipeUsuario) => {
+  let { id, nome, contato } = us.tipo.usuario
 
   return (
     <S.Container>

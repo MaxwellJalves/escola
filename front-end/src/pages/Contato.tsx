@@ -4,13 +4,14 @@ import Mock from '../mock/Contato.json'
 import * as I from '../types'
 
 let retorno: I.IListaDeContatos = Mock
-let [usuario] = retorno.contatos
 
 const Contato = () => {
   return (
     <>
       <Menu />
-      <CardContato contatos={usuario} />
+      {retorno.contatos.map(m => (
+        <CardContato tipo={m} />
+      ))}
     </>
   )
 }
