@@ -8,14 +8,30 @@ type usuario = {
 
 const CardContato = (us: usuario) => {
   const { contatos } = us
-  let { id, nome } = contatos.usuario
+  let { id, nome, contato } = contatos.usuario
 
   return (
     <S.Container>
       <S.Titulo>Contato</S.Titulo>
+      <div>
+        <S.TextoContato> Código: {id}</S.TextoContato>
+        <S.TextoContato>
+          {' '}
+          Nome: {nome.charAt(0).toUpperCase() + nome.substr(1)}
+        </S.TextoContato>
+      </div>
       <span>
-        <p>{id}</p>
-        <p>{nome}</p>
+        <ul>
+          <li>
+            <S.TextoContato>Telefone : {contato?.telefone}</S.TextoContato>
+          </li>
+          <li>
+            <S.TextoContato>Whatsapp : {contato?.whatsapp}</S.TextoContato>
+          </li>
+          <li>
+            <S.TextoContato>E-mail : {contato?.email}</S.TextoContato>
+          </li>
+        </ul>
       </span>
     </S.Container>
   )
