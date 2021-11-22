@@ -6,4 +6,10 @@ export const Cor = {
   turqueza: '#2cd4d9',
   cordefundo: '#533edd',
   themegradiente: ' linear-gradient(to right,#2cd4d9,#533edd)',
+  themegradienteCinza: 'linear-gradient(to bottom right, #737373, #434343);',
+}
+
+export const Fonte = {
+  roboto500: 'Roboto, sans-serif',
+  thin100: 'Zen Kaku Gothic Antique, sans-serif',
 }

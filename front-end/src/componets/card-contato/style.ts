@@ -1,5 +1,12 @@
 import styled from 'styled-components'
-import { Cor } from '../../uteis/styleGlobal'
+import { Cor, Fonte } from '../../uteis/styleGlobal'
+
+export const Titulo = styled.h1`
+  font-size: 39;
+  font-family: ${Fonte.roboto500};
+  display: flex;
+`
+
 export const Container = styled.div`
   width: 100%;
   margin: auto;
@@ -33,11 +40,6 @@ export const Container = styled.div`
       margin-bottom: 10px;
     }
   }
-`
-
-export const Titulo = styled.h1`
-  font-size: 39;
-  font-family: Tahoma;
 `
 
 export const TextoContato = styled.span`
