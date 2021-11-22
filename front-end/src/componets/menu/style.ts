@@ -1,10 +1,12 @@
-import styled from "styled-components";
+import styled from 'styled-components'
+import { Cor } from '../../uteis/styleGlobal'
 
 export const Container = styled.div`
   max-width: 100vw;
   min-width: 280px;
-  height: 100px;
-  border: 1px solid rebeccapurple;
+  height: 60px;
+
+  background: ${Cor.themegradiente};
   border-radius: 3px;
   padding: 0px 24px;
   display: flex;
@@ -21,7 +23,7 @@ export const Container = styled.div`
     font-size: 24px;
     font-style: normal;
     text-decoration: none;
-    color: rebeccapurple;
+    color: ${Cor.branco};
     padding: 20px;
   }
 
@@ -30,4 +32,4 @@ export const Container = styled.div`
     padding: 20px;
     border-radius: 8px;
   }
-`;
+`

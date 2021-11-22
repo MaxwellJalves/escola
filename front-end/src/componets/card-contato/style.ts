@@ -1,17 +1,17 @@
 import styled from 'styled-components'
-
+import { Cor } from '../../uteis/styleGlobal'
 export const Container = styled.div`
   width: 100%;
   margin: auto;
   max-width: 660px;
   min-height: 300px;
-  background-color: rebeccapurple;
+  background: ${Cor.themegradiente};
   margin: 10px 80px;
   font-family: Tahoma;
   flex-wrap: wrap;
   padding: 10px 25px;
   gap: 4px;
-  color: orange;
+  color: ${Cor.branco};
   border-radius: 12px;
   div {
     margin-bottom: 10px;

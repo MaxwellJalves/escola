@@ -1,11 +1,11 @@
-import Rotas from "./rotas";
+import Rotas from './router'
 
 function App() {
   return (
     <>
       <Rotas />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
