@@ -1,17 +1,24 @@
 import styled from 'styled-components'
+import { Cor, Fonte } from '../../uteis/styleGlobal'
+
+export const Titulo = styled.h1`
+  font-size: 39;
+  font-family: ${Fonte.roboto500};
+  display: flex;
+`
 
 export const Container = styled.div`
   width: 100%;
   margin: auto;
   max-width: 660px;
   min-height: 300px;
-  background-color: rebeccapurple;
+  background: ${Cor.themegradiente};
   margin: 10px 80px;
   font-family: Tahoma;
   flex-wrap: wrap;
   padding: 10px 25px;
   gap: 4px;
-  color: orange;
+  color: ${Cor.branco};
   border-radius: 12px;
   div {
     margin-bottom: 10px;
@@ -33,11 +40,6 @@ export const Container = styled.div`
       margin-bottom: 10px;
     }
   }
-`
-
-export const Titulo = styled.h1`
-  font-size: 39;
-  font-family: Tahoma;
 `
 
 export const TextoContato = styled.span`
