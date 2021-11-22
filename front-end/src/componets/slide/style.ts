@@ -25,4 +25,5 @@ export const ContainerSlide = styled.div`
 export const ContainerSlideIndormativo = styled(ContainerSlide)`
   min-height: 300px;
   background: ${Cor.themegradiente};
+  color: ${Cor.branco};
 `
