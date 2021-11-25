@@ -3,6 +3,7 @@ export interface IMaterias {
   cargaHorario: string | number;
   periodo: string | number;
 }
+
 export interface IListaDeContatos {
   contatos: Array<IUsuario>;
 }
@@ -15,4 +16,8 @@ export interface IContatos {
   email?: string;
   whatsapp?: string;
   telefone?: string;
+}
+
+export interface IGaleria {
+ imagens : [{id:number | string; descricao:string; url:string;}]
 }
