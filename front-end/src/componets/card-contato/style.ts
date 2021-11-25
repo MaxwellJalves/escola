@@ -26,7 +26,9 @@ export const Container = styled.div`
 
   color: ${Cor.branco};
   @media (min-width: 80px) and (max-width: 760px) {
-    min-width: 200px;
+    width: 84vw;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row: repeat(1, 250px);
   }
 
   background: ${Cor.themegradiente};
