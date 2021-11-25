@@ -3,56 +3,45 @@ import { Cor, Fonte } from '../../uteis/styleGlobal'
 
 export const Titulo = styled.h1`
   font-size: 39;
-  font-family: ${Fonte.roboto500};
+  font-family: ${Fonte.thin100};
+  color: ${Cor.branco};
   display: flex;
+  @media (min-width: 280px) and (max-width: 1220px) {
+    font-size: 28px;
+    font-size: 500;
+    justify-content: center;
+  }
 `
 
 export const Container = styled.div`
-  width: 100%;
-  margin: auto;
-  max-width: 660px;
-  min-height: 300px;
   background: ${Cor.themegradiente};
-  margin: 10px 80px;
-  font-family: Tahoma;
-  flex-wrap: wrap;
-  padding: 10px 25px;
-  gap: 4px;
-  color: ${Cor.branco};
   border-radius: 12px;
-  div {
-    margin-bottom: 10px;
 
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  span {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  margin: 24px 160px;
+  display: grid;
 
-    li {
-      display: flex;
-      height: auto;
-      flex-direction: column;
-      margin-bottom: 10px;
-    }
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 250px 200px 250px;
+  align-items: center;
+
+  @media (min-width: 280px) and (max-width: 1220px) {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    margin: 24px 24px;
+    padding-bottom: 20px;
+    align-items: center;
   }
 `
 
 export const TextoContato = styled.span`
   display: flex;
+  color: white;
+  justify-content: start;
 
-  justify-content: space-around;
-  border: 1px solid white;
-  width: 400px;
   height: 20px;
-  padding: 10px;
+  padding: 5px;
   font-size: 20px;
   font-weight: 500;
   font-style: normal;
   font-family: Tahoma;
-  border-radius: 12px;
 `

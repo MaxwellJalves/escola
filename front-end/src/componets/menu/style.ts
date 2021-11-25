@@ -24,7 +24,7 @@ export const Container = styled.div`
     font-style: normal;
     text-decoration: none;
     color: ${Cor.branco};
-    padding: 20px;
+    padding: 10px;
   }
 
   a:hover {
