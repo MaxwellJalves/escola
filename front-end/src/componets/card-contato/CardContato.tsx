@@ -2,6 +2,7 @@
 
 import * as I from '../../types'
 import * as S from './style'
+import * as C from '../../uteis/conversor'
 type TipeUsuario = {
   tipo: I.IUsuario
 }
@@ -16,7 +17,7 @@ const CardContato = (us: TipeUsuario) => {
         <S.TextoContato> Código: {id}</S.TextoContato>
         <S.TextoContato>
           {' '}
-          Nome: {nome.charAt(0).toUpperCase() + nome.substr(1)}
+          Nome: {C.conversorCamelCase(nome,' ')}
         </S.TextoContato>
       </div>
       <span>
