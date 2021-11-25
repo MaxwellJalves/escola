@@ -29,7 +29,6 @@ export const Container = styled.div`
 
   a:hover {
     background-color: rgba(5, 5, 5, 0.2);
-    padding: 10px;
     border-radius: 8px;
   }
 

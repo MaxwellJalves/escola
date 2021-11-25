@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 import { Cor, Fonte } from '../../uteis/styleGlobal'
 
+const FonteParagrafo = `  font-size: 20px;
+font-weight: 500;
+font-style: normal;
+font-family: Tahoma;`
 export const Titulo = styled.h1`
   font-size: 39;
   font-family: ${Fonte.roboto500};
@@ -8,51 +12,28 @@ export const Titulo = styled.h1`
 `
 
 export const Container = styled.div`
-  width: 100%;
-  margin: auto;
-  max-width: 660px;
-  min-height: 300px;
-  background: ${Cor.themegradiente};
-  margin: 10px 80px;
-  font-family: Tahoma;
-  flex-wrap: wrap;
-  padding: 10px 25px;
-  gap: 4px;
-  color: ${Cor.branco};
+  margin: 24px auto;
+  height: 20vh;
+  width: 90vh;
+
   border-radius: 12px;
-  div {
-    margin-bottom: 10px;
 
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  span {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  padding: 2px 4px;
 
-    li {
-      display: flex;
-      height: auto;
-      flex-direction: column;
-      margin-bottom: 10px;
-    }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row: repeat(3, 1fr);
+
+  color: ${Cor.branco};
+  @media (min-width: 80px) and (max-width: 760px) {
+    min-width: 200px;
   }
+
+  background: ${Cor.themegradiente};
 `
 
 export const TextoContato = styled.span`
   display: flex;
-
-  justify-content: space-around;
-  border: 1px solid white;
-  width: 400px;
-  height: 20px;
-  padding: 10px;
-  font-size: 20px;
-  font-weight: 500;
-  font-style: normal;
-  font-family: Tahoma;
-  border-radius: 12px;
+  justify-content: flex-start;
+  ${FonteParagrafo}
 `
