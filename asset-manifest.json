@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/escola/static/js/main.f561a702.chunk.js",
+    "main.js.map": "/escola/static/js/main.f561a702.chunk.js.map",
+    "runtime-main.js": "/escola/static/js/runtime-main.33d7d8dd.js",
+    "runtime-main.js.map": "/escola/static/js/runtime-main.33d7d8dd.js.map",
+    "static/js/2.c1fe6099.chunk.js": "/escola/static/js/2.c1fe6099.chunk.js",
+    "static/js/2.c1fe6099.chunk.js.map": "/escola/static/js/2.c1fe6099.chunk.js.map",
+    "index.html": "/escola/index.html",
+    "static/js/2.c1fe6099.chunk.js.LICENSE.txt": "/escola/static/js/2.c1fe6099.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.33d7d8dd.js",
+    "static/js/2.c1fe6099.chunk.js",
+    "static/js/main.f561a702.chunk.js"
+  ]
+}
