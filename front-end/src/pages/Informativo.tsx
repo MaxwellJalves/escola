@@ -1,18 +1,15 @@
-import Galeria from "../componets/galeria/Galeria";
-import Menu from "../componets/menu/Menu";
-import * as Docs from '../mock/Imagens.json'
+import GaleriaV2 from '../componets/galeria-v2/Galeria-v2'
+import Menu from '../componets/menu/Menu'
 
 const Informativo = () => {
-  let api = Docs.imagens
   return (
     <>
-      {" "}
+      {' '}
       <Menu />
       <p>Informativo</p>
-
-
+      <GaleriaV2 />
     </>
-  );
-};
+  )
+}
 
-export default Informativo;
+export default Informativo
