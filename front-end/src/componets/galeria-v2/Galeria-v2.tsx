@@ -8,6 +8,8 @@ import {
   ImgSlide,
   Seta,
   Zoom,
+  SegundoContainer,
+  ImgSlideMini,
 } from './galeria-style'
 import LEFT from '../../assets/images/arrow-left.svg'
 import RIGHT from '../../assets/images/arrow-right.svg'
@@ -25,7 +27,7 @@ const GaleriaV2 = () => {
   }
   /** PENDENTE Verificar o erro de type para todos os navegadores */
   const fecharTelaCheia = () => {
-    let galeria = document.querySelector('#galeria-id')
+    let galeria = document.querySelector('#full')
     galeria?.requestFullscreen.call(galeria)
   }
 
@@ -58,25 +60,40 @@ const GaleriaV2 = () => {
 
   return (
     <>
-      <ContainerGaleria id='galeria-id'>
-        <Exit id='sair' onClick={() => fecharTelaCheia()} />
-        <Seta
-          className='seta'
-          onClick={() => {
-            exibirImagem('esquerda')
-          }}>
-          <img src={LEFT} alt='esquerda' />
-        </Seta>
-        <ImagemCentral>
-          <ImgSlide src={data.imagens[index].url} />
-        </ImagemCentral>
-        <Seta className='seta' onClick={() => exibirImagem('direita')}>
-          <img src={RIGHT} alt='direita' />
-        </Seta>
-      </ContainerGaleria>
+      <div className='full'>
+        <ContainerGaleria id='galeria-id'>
+          <Exit id='sair' onClick={() => fecharTelaCheia()} />
+          <Seta
+            className='seta'
+            onClick={() => {
+              exibirImagem('esquerda')
+            }}>
+            <img src={LEFT} alt='esquerda' />
+          </Seta>
+          <ImagemCentral>
+            <ImgSlide src={data.imagens[index].url} />
+          </ImagemCentral>
+          <Seta className='seta' onClick={() => exibirImagem('direita')}>
+            <img src={RIGHT} alt='direita' />
+          </Seta>
+        </ContainerGaleria>
+        <div>
+          {data.imagens.map(({ id, url, descricao }) => (
+            <ImgSlideMini src={url} key={id} alt={descricao} />
+          ))}
+        </div>
+      </div>
+
       <Zoom onClick={() => telaCheia()}>
         <img src={ZOOM} alt='' /> zoom
       </Zoom>
+
+      <SegundoContainer>
+        <p> Primeiro texto</p>
+        <p> segundo texto</p>
+        <p> $$</p>
+        <p> fone (xx) xxxx-xxxx</p>
+      </SegundoContainer>
     </>
   )
 }

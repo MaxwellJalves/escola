@@ -16,7 +16,6 @@ export const ContainerGaleria = styled.div`
     margin: 0;
     padding: 0px;
   }
-  background-color: ${cores.laranja_carot};
 
   width: 72vw;
   height: 556px;
@@ -33,6 +32,7 @@ export const ImagemCentral = styled.div`
   border-radius: 12px;
   width: 644px;
   height: 456px;
+  max-width: 944px;
   background-size: cover;
   overflow: hidden;
 `
@@ -41,6 +41,18 @@ export const ImgSlide = styled.img`
   width: 644px;
   height: 456px;
   background-size: contain;
+
+  :fullscreen {
+    width: 880px;
+  }
+`
+
+export const ImgSlideMini = styled.img`
+  src: ${props => (props.src ? props.src : props.src)};
+  width: 180px;
+  height: 90px;
+  object-fit: cover;
+  align-self: center;
 `
 
 export const Seta = styled.span`
@@ -64,6 +76,7 @@ export const Seta = styled.span`
 `
 
 export const Zoom = styled.span`
+  margin-top: 60px;
   width: 100px;
   height: 18px;
   justify-self: center;
@@ -82,4 +95,11 @@ export const Exit = styled(Zoom)`
   height: 20px;
   width: 20px;
   background-color: red;
+`
+
+export const SegundoContainer = styled.div`
+  margin-top: 60px;
+  width: 320px;
+  height: 556px;
+  border: 1px solid ${cores.cinza_escuro_rgb};
 `
