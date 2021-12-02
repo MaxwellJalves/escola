@@ -1,17 +1,23 @@
 {
   "files": {
-    "main.js": "/escola/static/js/main.88f7b8df.chunk.js",
-    "main.js.map": "/escola/static/js/main.88f7b8df.chunk.js.map",
+    "main.css": "/escola/static/css/main.7aaa7e38.chunk.css",
+    "main.js": "/escola/static/js/main.3db80d20.chunk.js",
+    "main.js.map": "/escola/static/js/main.3db80d20.chunk.js.map",
     "runtime-main.js": "/escola/static/js/runtime-main.33d7d8dd.js",
     "runtime-main.js.map": "/escola/static/js/runtime-main.33d7d8dd.js.map",
-    "static/js/2.c1fe6099.chunk.js": "/escola/static/js/2.c1fe6099.chunk.js",
-    "static/js/2.c1fe6099.chunk.js.map": "/escola/static/js/2.c1fe6099.chunk.js.map",
+    "static/js/2.a35873c3.chunk.js": "/escola/static/js/2.a35873c3.chunk.js",
+    "static/js/2.a35873c3.chunk.js.map": "/escola/static/js/2.a35873c3.chunk.js.map",
     "index.html": "/escola/index.html",
-    "static/js/2.c1fe6099.chunk.js.LICENSE.txt": "/escola/static/js/2.c1fe6099.chunk.js.LICENSE.txt"
+    "static/css/main.7aaa7e38.chunk.css.map": "/escola/static/css/main.7aaa7e38.chunk.css.map",
+    "static/js/2.a35873c3.chunk.js.LICENSE.txt": "/escola/static/js/2.a35873c3.chunk.js.LICENSE.txt",
+    "static/media/arrow-left.10ce0dcc.svg": "/escola/static/media/arrow-left.10ce0dcc.svg",
+    "static/media/arrow-right.96f7b437.svg": "/escola/static/media/arrow-right.96f7b437.svg",
+    "static/media/zoom.fa4ab80e.svg": "/escola/static/media/zoom.fa4ab80e.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.33d7d8dd.js",
-    "static/js/2.c1fe6099.chunk.js",
-    "static/js/main.88f7b8df.chunk.js"
+    "static/js/2.a35873c3.chunk.js",
+    "static/css/main.7aaa7e38.chunk.css",
+    "static/js/main.3db80d20.chunk.js"
   ]
 }
