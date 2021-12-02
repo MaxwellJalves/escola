@@ -35,6 +35,10 @@ export const ImagemCentral = styled.div`
   max-width: 944px;
   background-size: cover;
   overflow: hidden;
+
+  :fullscreen {
+    background-color: red;
+  }
 `
 
 export const ImgSlide = styled.img`
@@ -42,8 +46,9 @@ export const ImgSlide = styled.img`
   height: 456px;
   background-size: contain;
 
-  :fullscreen {
-    width: 880px;
+  @media screen and (max-width: 1440px) {
+    width: 100%;
+    heigth: 80vh;
   }
 `
 
@@ -51,15 +56,20 @@ export const ImgSlideMini = styled.img`
   src: ${props => (props.src ? props.src : props.src)};
   width: 180px;
   height: 90px;
+  gap: 2px;
   object-fit: cover;
   align-self: center;
+  cursor: pointer;
+  :hover {
+    background: rgba(0, 122, 0, 0.5);
+  }
 `
 
 export const Seta = styled.span`
   display: flex;
   border: 1px solid white;
   border-radius: 50px;
-
+  cursor: pointer;
   img {
     border-radius: 50px;
     display: flex;
@@ -90,6 +100,7 @@ export const Zoom = styled.span`
   color: ${cores.cinza_escuro_rgb};
 
   background-color: white;
+  align-self: center;
 `
 export const Exit = styled(Zoom)`
   height: 20px;
@@ -102,4 +113,12 @@ export const SegundoContainer = styled.div`
   width: 320px;
   height: 556px;
   border: 1px solid ${cores.cinza_escuro_rgb};
+`
+
+export const GridColumn = styled.div`
+  width: 100%;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `

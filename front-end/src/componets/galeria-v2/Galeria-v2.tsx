@@ -10,6 +10,7 @@ import {
   Zoom,
   SegundoContainer,
   ImgSlideMini,
+  GridColumn,
 } from './galeria-style'
 import LEFT from '../../assets/images/arrow-left.svg'
 import RIGHT from '../../assets/images/arrow-right.svg'
@@ -60,8 +61,8 @@ const GaleriaV2 = () => {
 
   return (
     <>
-      <div className='full'>
-        <ContainerGaleria id='galeria-id'>
+      <GridColumn id='galeria-id'>
+        <ContainerGaleria>
           <Exit id='sair' onClick={() => fecharTelaCheia()} />
           <Seta
             className='seta'
@@ -79,21 +80,19 @@ const GaleriaV2 = () => {
         </ContainerGaleria>
         <div>
           {data.imagens.map(({ id, url, descricao }) => (
-            <ImgSlideMini src={url} key={id} alt={descricao} />
+            <ImgSlideMini
+              src={url}
+              key={id}
+              alt={descricao}
+              onClick={() => setIndex(id - 1)}
+            />
           ))}
         </div>
-      </div>
+      </GridColumn>
 
       <Zoom onClick={() => telaCheia()}>
         <img src={ZOOM} alt='' /> zoom
       </Zoom>
-
-      <SegundoContainer>
-        <p> Primeiro texto</p>
-        <p> segundo texto</p>
-        <p> $$</p>
-        <p> fone (xx) xxxx-xxxx</p>
-      </SegundoContainer>
     </>
   )
 }
