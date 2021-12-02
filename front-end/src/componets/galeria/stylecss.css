@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container-galeria {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  height: 520px;
+  width: 935px;
+}
+
+input {
+  margin: 160px 160;
+
+  transition: 0.5s;
+  width: 300px;
+
+  height: 24px;
+  width: 10%;
+}
+
+#slide {
+  background-color: blue;
+}
+
+label {
+  bottom: 20px;
+
+  width: 10px;
+  height: 10px;
+
+  border: 1px solid rgb(28, 6, 6);
+
+  display: flex;
+  border-radius: 50px;
+
+  padding: 10px;
+}
+img {
+  max-width: 800px;
+  height: auto;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: center;
+}
+
+label:hover {
+  background-color: green;
+}
