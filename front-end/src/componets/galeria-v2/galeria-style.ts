@@ -186,7 +186,6 @@ export const ContainerDivImgMini = styled.div`
     gap: 5px;
     @media ${responsivo.mobile} {
       height: 120px;
-
       overflow-x: scroll;
       scroll-behavior: smooth;
       width: 290px;
