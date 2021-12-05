@@ -10,6 +10,7 @@ import {
   Zoom,
   ImgSlideMini,
   GridColumn,
+  ContainerDivImgMini,
 } from './galeria-style'
 import LEFT from '../../assets/images/arrow-left.svg'
 import RIGHT from '../../assets/images/arrow-right.svg'
@@ -77,7 +78,7 @@ const GaleriaV2 = () => {
             <img src={RIGHT} alt='direita' />
           </Seta>
         </ContainerGaleria>
-        <div>
+        <ContainerDivImgMini>
           {data.imagens.map(({ id, url, descricao }) => (
             <ImgSlideMini
               src={url}
@@ -86,7 +87,7 @@ const GaleriaV2 = () => {
               onClick={() => setIndex(id - 1)}
             />
           ))}
-        </div>
+        </ContainerDivImgMini>
       </GridColumn>
 
       <Zoom onClick={() => telaCheia()}>

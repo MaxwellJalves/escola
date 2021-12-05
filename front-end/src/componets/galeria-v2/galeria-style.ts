@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+const responsivo = {
+  mobile: ' (min-width: 280px) and (max-width: 768px)',
+}
+
 const cores = {
   corbgc: '#34495E',
   cortc: '#496684',
@@ -7,6 +11,21 @@ const cores = {
   cinza_escuro_rgb: 'rgb(149, 165, 166)',
   laranja_carot: 'rgb(230, 126, 34)',
 }
+
+export const GridColumn = styled.div`
+  width: 100%;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media ${responsivo.mobile} {
+    max-width: 320px;
+    margin: 24px 24px;
+    width: calc(100vw -148px);
+    height: auto;
+  }
+`
 
 export const ContainerGaleria = styled.div`
   #sair {
@@ -27,28 +46,52 @@ export const ContainerGaleria = styled.div`
   button {
     width: 100%;
   }
+
+  @media ${responsivo.mobile} {
+    max-width: 320px;
+    width: 100vw;
+    max-height: 280px;
+  }
 `
 export const ImagemCentral = styled.div`
   border-radius: 12px;
   width: 644px;
   height: 456px;
   max-width: 944px;
-  background-size: cover;
+
   overflow: hidden;
 
   :fullscreen {
     background-color: red;
+  }
+  @media ${responsivo.mobile} {
+    display: flex;
+    margin-left: -24px;
+    margin-right: -24px;
+    width: 320px;
+    height: calc(100vh - 38px);
   }
 `
 
 export const ImgSlide = styled.img`
   width: 644px;
   height: 456px;
-  background-size: contain;
 
   @media screen and (max-width: 1440px) {
     width: 100%;
     heigth: 80vh;
+  }
+  @media ${responsivo.mobile} {
+    max-width: 320px;
+
+    width: 100%;
+    object-fit: contain;
+    height: auto;
+    border-radius: 12px;
+
+    border: 1px;
+    padding: 0px;
+    margin: 0px;
   }
 `
 
@@ -66,7 +109,6 @@ export const ImgSlideMini = styled.img`
 `
 
 export const Seta = styled.span`
-  display: flex;
   border: 1px solid white;
   border-radius: 50px;
   cursor: pointer;
@@ -83,9 +125,23 @@ export const Seta = styled.span`
   img:hover {
     background-color: rgba(255, 255, 255, 0.5);
   }
+  @media ${responsivo.mobile} {
+    display: flex;
+    position: relative;
+
+    img {
+      flex: 1;
+      padding: 0px;
+      margin: 0px;
+      border: none;
+    }
+  }
 `
 
 export const Zoom = styled.span`
+  @media screen and (display: fullscreen) {
+    display: none;
+  }
   margin-top: 60px;
   width: 100px;
   height: 18px;
@@ -101,6 +157,13 @@ export const Zoom = styled.span`
 
   background-color: white;
   align-self: center;
+
+  @media ${responsivo.mobile} {
+    padding: 10px 50px;
+    align-self: left;
+    width: auto;
+    border: 1px solid linear-gradient(red, orange);
+  }
 `
 export const Exit = styled(Zoom)`
   height: 20px;
@@ -115,10 +178,28 @@ export const SegundoContainer = styled.div`
   border: 1px solid ${cores.cinza_escuro_rgb};
 `
 
-export const GridColumn = styled.div`
-  width: 100%;
-  height: 800px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+export const ContainerDivImgMini = styled.div`
+  display: none;
+
+  @media screen and (display-mode: fullscreen) {
+    display: flex;
+    gap: 5px;
+    @media ${responsivo.mobile} {
+      height: 120px;
+
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+      width: 290px;
+      ::-webkit-scrollbar {
+        width: 100%;
+        height: 5px;
+        background-color: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(to right, orange, red, blueviolet);
+        border-radius: 10px;
+        width: 10px;
+      }
+    }
+  }
 `
