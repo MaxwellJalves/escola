@@ -139,6 +139,9 @@ export const Zoom = styled.span`
   @media screen and (display-mode: fullscreen) {
     display: none;
   }
+  :fullscreen {
+    display: none;
+  }
   display: flex;
   align-items: center;
   justify-content: center;
@@ -165,9 +168,9 @@ export const Zoom = styled.span`
 export const Exit = styled.button`
   display: none;
 
-  @media screen and (display-mode: fullscreen) {
+  :fullscreen {
     padding: 25px;
-   margin-right: 150px;
+    margin-right: 150px;
     align-self: flex-end;
     display: flex;
     font-size: 30px;
@@ -175,11 +178,25 @@ export const Exit = styled.button`
     border: none;
     background: transparent;
     color: white;
-}
     :hover {
       border-radius: 45px;
       background: rgba(80, 10, 90, 0.9);
     }
+  }
+  @media screen and (display-mode: fullscreen) {
+    padding: 25px;
+    margin-right: 150px;
+    align-self: flex-end;
+    display: flex;
+    font-size: 30px;
+    font-weight: 600;
+    border: none;
+    background: transparent;
+    color: white;
+  }
+  :hover {
+    border-radius: 45px;
+    background: rgba(80, 10, 90, 0.9);
   }
 `
 
