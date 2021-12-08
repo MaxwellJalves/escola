@@ -136,17 +136,13 @@ export const Seta = styled.span`
 `
 
 export const Zoom = styled.span`
-  @media screen and (display-mode: fullscreen), (device-width: fullscreen) {
-    display: none;
-  }
-  :fullscreen {
-    display: none;
-  }
+  margin: 0 auto;
+
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 60px;
-  width: 100px;
+  max-width: 120px;
   height: 18px;
 
   border-radius: 12px;

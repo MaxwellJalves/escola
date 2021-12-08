@@ -89,10 +89,10 @@ const GaleriaV2 = () => {
             />
           ))}
         </ContainerDivImgMini>
-        <Zoom onClick={() => telaCheia()}>
-          <img src={ZOOM} alt='' /> zoom
-        </Zoom>
       </GridColumn>
+      <Zoom onClick={() => telaCheia()}>
+        <img src={ZOOM} alt='' /> zoom
+      </Zoom>
     </>
   )
 }
