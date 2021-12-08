@@ -136,7 +136,7 @@ export const Seta = styled.span`
 `
 
 export const Zoom = styled.span`
-  @media screen and (display-mode: fullscreen) {
+  @media screen and (display-mode: fullscreen), (device-width: fullscreen) {
     display: none;
   }
   :fullscreen {
@@ -183,7 +183,7 @@ export const Exit = styled.button`
       background: rgba(80, 10, 90, 0.9);
     }
   }
-  @media screen and (display-mode: fullscreen) {
+  @media screen and (display-mode: fullscreen), (device-width: fullscreen) {
     padding: 25px;
     margin-right: 150px;
     align-self: flex-end;
