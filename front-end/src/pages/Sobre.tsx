@@ -1,13 +1,14 @@
-import Menu from "../componets/menu/Menu";
+import CardInfo from '../componets/card-info/CardInfo'
+import Menu from '../componets/menu/Menu'
 
 const Sobre = () => {
   return (
     <>
-      {" "}
+      {' '}
       <Menu />
-      <p>Sobre</p>
+      <CardInfo />
     </>
-  );
-};
+  )
+}
 
-export default Sobre;
+export default Sobre
