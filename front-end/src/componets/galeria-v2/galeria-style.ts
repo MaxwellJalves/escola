@@ -28,9 +28,6 @@ export const GridColumn = styled.div`
 `
 
 export const ContainerGaleria = styled.div`
-  #sair {
-    display: none;
-  }
   * {
     margin: 0;
     padding: 0px;
@@ -139,16 +136,16 @@ export const Seta = styled.span`
 `
 
 export const Zoom = styled.span`
-  @media screen and (display: fullscreen) {
-    display: none;
-  }
-  margin-top: 60px;
-  width: 100px;
-  height: 18px;
-  justify-self: center;
-  border-radius: 12px;
+  margin: 0 auto;
 
-  margin-left: calc(72vw / 2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  max-width: 120px;
+  height: 18px;
+
+  border-radius: 12px;
 
   padding: 30px;
   border: 1px solid ${cores.cinza_escuro_rgb};
@@ -156,7 +153,6 @@ export const Zoom = styled.span`
   color: ${cores.cinza_escuro_rgb};
 
   background-color: white;
-  align-self: center;
 
   @media ${responsivo.mobile} {
     padding: 10px 50px;
@@ -165,10 +161,39 @@ export const Zoom = styled.span`
     border: 1px solid linear-gradient(red, orange);
   }
 `
-export const Exit = styled(Zoom)`
-  height: 20px;
-  width: 20px;
-  background-color: red;
+export const Exit = styled.button`
+  display: none;
+
+  :fullscreen {
+    padding: 25px;
+    margin-right: 150px;
+    align-self: flex-end;
+    display: flex;
+    font-size: 30px;
+    font-weight: 600;
+    border: none;
+    background: transparent;
+    color: white;
+    :hover {
+      border-radius: 45px;
+      background: rgba(80, 10, 90, 0.9);
+    }
+  }
+  @media screen and (display-mode: fullscreen), (device-width: fullscreen) {
+    padding: 25px;
+    margin-right: 150px;
+    align-self: flex-end;
+    display: flex;
+    font-size: 30px;
+    font-weight: 600;
+    border: none;
+    background: transparent;
+    color: white;
+  }
+  :hover {
+    border-radius: 45px;
+    background: rgba(80, 10, 90, 0.9);
+  }
 `
 
 export const SegundoContainer = styled.div`
@@ -179,27 +204,24 @@ export const SegundoContainer = styled.div`
 `
 
 export const ContainerDivImgMini = styled.div`
-  display: none;
-
-  @media screen and (display-mode: fullscreen) {
-    display: flex;
-    gap: 5px;
-    @media ${responsivo.mobile} {
-      height: 120px;
-
-      overflow-x: scroll;
-      scroll-behavior: smooth;
-      width: 290px;
-      ::-webkit-scrollbar {
-        width: 100%;
-        height: 5px;
-        background-color: transparent;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: linear-gradient(to right, orange, red, blueviolet);
-        border-radius: 10px;
-        width: 10px;
-      }
+  display: flex;
+  gap: 5px;
+  @media ${responsivo.mobile} {
+    height: 120px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    width: 290px;
+    ::-webkit-scrollbar {
+      width: 100%;
+      height: 5px;
+      touch-action: cross-slide-x;
+      background-color: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(to right, orange, red, blueviolet);
+      touch-action: cross-slide-x;
+      border-radius: 10px;
+      width: 10px;
     }
   }
 `

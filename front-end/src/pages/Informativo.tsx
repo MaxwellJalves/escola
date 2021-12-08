@@ -6,7 +6,6 @@ const Informativo = () => {
     <>
       {' '}
       <Menu />
-      <p>Informativo</p>
       <GaleriaV2 />
     </>
   )
