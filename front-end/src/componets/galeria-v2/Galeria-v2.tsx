@@ -28,8 +28,7 @@ const GaleriaV2 = () => {
   }
   /** PENDENTE Verificar o erro de type para todos os navegadores */
   const fecharTelaCheia = () => {
-    let galeria = document.querySelector('#full')
-    galeria?.requestFullscreen.call(galeria)
+    return document.exitFullscreen()
   }
 
   const imagemAnterior = (posicao: number) => {
@@ -62,8 +61,10 @@ const GaleriaV2 = () => {
   return (
     <>
       <GridColumn id='galeria-id'>
+        <Exit id='sair' onClick={() => fecharTelaCheia()}>
+          X{' '}
+        </Exit>
         <ContainerGaleria>
-          <Exit id='sair' onClick={() => fecharTelaCheia()} />
           <Seta
             className='seta'
             onClick={() => {
@@ -88,11 +89,10 @@ const GaleriaV2 = () => {
             />
           ))}
         </ContainerDivImgMini>
+        <Zoom onClick={() => telaCheia()}>
+          <img src={ZOOM} alt='' /> zoom
+        </Zoom>
       </GridColumn>
-
-      <Zoom onClick={() => telaCheia()}>
-        <img src={ZOOM} alt='' /> zoom
-      </Zoom>
     </>
   )
 }
