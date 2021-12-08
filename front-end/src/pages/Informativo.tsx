@@ -4,7 +4,6 @@ import Menu from '../componets/menu/Menu'
 const Informativo = () => {
   return (
     <>
-      {' '}
       <Menu />
       <GaleriaV2 />
     </>
